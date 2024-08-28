@@ -21,8 +21,11 @@ def convert_objectid_to_str(data):
 benefit_schema = {
     'name': {'type': 'string', 'required': True, 'empty': False},
     'description': {'type': 'string', 'required': True, 'empty': False},
-    'provider': {'type': 'string', 'required': True, 'empty': False},
-    'expiration_date': {'type': 'string', 'required': True, 'empty': False},
+    'expirationDate': {'type': 'string', 'required': True, 'empty': False},
+    'link': {'type': 'string', 'required': True, 'empty': False},
+    'ubication': {'type': 'string', 'required': True, 'empty': False},
+    'termsConditions': {'type': 'string', 'required': True, 'empty': False},
+    'image': {'type': 'string', 'required': True, 'empty': False}
 }
 
 validator = Validator(benefit_schema)

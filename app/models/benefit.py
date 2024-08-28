@@ -2,16 +2,22 @@ from pymongo import MongoClient
 
 class Benefit:
     def __init__(self, data):
-        self.name = data.get('name')
+        self.title = data.get('title')
         self.description = data.get('description')
-        self.provider = data.get('provider')
-        self.expiration_date = data.get('expiration_date')
+        self.expirationDate = data.get('expirationDate')
+        self.link = data.get('link')
+        self.ubication = data.get('ubication')
+        self.termsConditions = data.get('termsConditions')
+        self.image = data.get('image')
 
     @staticmethod
     def to_json(benefit):
         return {
-            'name': benefit.name,
+            'title': benefit.title,
             'description': benefit.description,
-            'provider': benefit.provider,
-            'expiration_date': benefit.expiration_date
+            'expirationDate': benefit.expirationDate,
+            'link': benefit.link,
+            'ubication': benefit.ubication,
+            'termsConditions': benefit.termsConditions,
+            'image': benefit.image
         }
